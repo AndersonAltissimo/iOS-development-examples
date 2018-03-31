@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,20 +19,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uji-vw-7uZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="364"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uji-vw-7uZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="348"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temperatura" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sll-7e-0rp">
-                                        <rect key="frame" x="32" y="28" width="311" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sll-7e-0rp">
+                                        <rect key="frame" x="27.5" y="40" width="320" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="bpV-9W-7Vx"/>
+                                            <constraint firstAttribute="height" constant="40" id="tQL-6J-xic"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Bd-Cx-5ie">
-                                        <rect key="frame" x="314" y="40" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Bd-Cx-5ie">
+                                        <rect key="frame" x="330" y="42" width="30" height="36"/>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
                                         <state key="normal" title="≫">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,17 +42,15 @@
                                             <action selector="showNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GRa-Rh-8Sa"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XHJ-oI-1nR">
-                                        <rect key="frame" x="32" y="91" width="311" height="118"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XHJ-oI-1nR">
+                                        <rect key="frame" x="32" y="95" width="311" height="120"/>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UO2-DK-Jq4">
-                                        <rect key="frame" x="32" y="295" width="118" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UO2-DK-Jq4">
+                                        <rect key="frame" x="32" y="265" width="77" height="42"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                         <state key="normal" title="Celsius">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -59,9 +59,8 @@
                                             <action selector="convert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1qk-og-OLO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iv8-4w-kWr">
-                                        <rect key="frame" x="224" y="295" width="119" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iv8-4w-kWr">
+                                        <rect key="frame" x="231" y="265" width="112" height="42"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                         <state key="normal" title="Fahrenheit">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -72,30 +71,53 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.22745098039215686" green="0.52156862745098043" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="XHJ-oI-1nR" firstAttribute="centerX" secondItem="uji-vw-7uZ" secondAttribute="centerX" id="5lk-5e-XYn"/>
+                                    <constraint firstItem="Iv8-4w-kWr" firstAttribute="trailing" secondItem="XHJ-oI-1nR" secondAttribute="trailing" id="CcQ-dc-S6c"/>
+                                    <constraint firstItem="XHJ-oI-1nR" firstAttribute="leading" secondItem="uji-vw-7uZ" secondAttribute="leading" constant="32" id="GLe-g1-bUs"/>
+                                    <constraint firstItem="sll-7e-0rp" firstAttribute="top" secondItem="uji-vw-7uZ" secondAttribute="top" constant="40" id="H4e-wQ-DGi"/>
+                                    <constraint firstItem="UO2-DK-Jq4" firstAttribute="top" secondItem="XHJ-oI-1nR" secondAttribute="bottom" constant="50" id="Mz6-Id-aGa"/>
+                                    <constraint firstItem="UO2-DK-Jq4" firstAttribute="leading" secondItem="XHJ-oI-1nR" secondAttribute="leading" id="UpM-SU-VMI"/>
+                                    <constraint firstItem="0Bd-Cx-5ie" firstAttribute="centerY" secondItem="sll-7e-0rp" secondAttribute="centerY" id="ifN-k3-O6G"/>
+                                    <constraint firstItem="Iv8-4w-kWr" firstAttribute="centerY" secondItem="UO2-DK-Jq4" secondAttribute="centerY" id="jMu-hh-oWl"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Bd-Cx-5ie" secondAttribute="trailing" constant="15" id="kCx-Gu-WQb"/>
+                                    <constraint firstItem="sll-7e-0rp" firstAttribute="centerX" secondItem="uji-vw-7uZ" secondAttribute="centerX" id="mfa-Iz-gM3"/>
+                                    <constraint firstAttribute="trailing" secondItem="XHJ-oI-1nR" secondAttribute="trailing" constant="32" id="vTg-4d-vK3"/>
+                                    <constraint firstItem="XHJ-oI-1nR" firstAttribute="top" secondItem="sll-7e-0rp" secondAttribute="bottom" constant="15" id="ztg-Fq-KiX"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSp-sR-fyD">
-                                <rect key="frame" x="16" y="390" width="343" height="121"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="tSp-sR-fyD">
+                                <rect key="frame" x="32" y="390" width="311" height="121"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <color key="textColor" red="0.365264892578125" green="0.591167151927948" blue="0.87846940755844116" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzT-j3-v7w">
-                                <rect key="frame" x="16" y="526" width="343" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzT-j3-v7w">
+                                <rect key="frame" x="158.5" y="548" width="58" height="39"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                 <color key="textColor" red="0.365264892578125" green="0.591167151927948" blue="0.87846940755844116" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uji-vw-7uZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="03W-Ne-WCR"/>
+                            <constraint firstItem="KzT-j3-v7w" firstAttribute="top" secondItem="tSp-sR-fyD" secondAttribute="bottom" constant="50" id="4xB-a6-vUH"/>
+                            <constraint firstItem="tSp-sR-fyD" firstAttribute="top" secondItem="uji-vw-7uZ" secondAttribute="bottom" constant="20" id="BkF-rV-DJ7"/>
+                            <constraint firstItem="uji-vw-7uZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VtA-6s-6FQ"/>
+                            <constraint firstItem="KzT-j3-v7w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xaf-Rx-3sd"/>
+                            <constraint firstItem="uji-vw-7uZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="ZXW-yq-Gxv"/>
+                            <constraint firstItem="tSp-sR-fyD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="dOK-Tp-TM9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tSp-sR-fyD" secondAttribute="trailing" constant="32" id="sO4-rd-IBk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="btInit1" destination="UO2-DK-Jq4" id="Da0-l5-BMZ"/>
                         <outlet property="btInit2" destination="Iv8-4w-kWr" id="zIw-2N-Jkx"/>
                         <outlet property="lbResult" destination="tSp-sR-fyD" id="VHV-DM-4ob"/>
-                        <outlet property="lvResultUnit" destination="KzT-j3-v7w" id="E2X-UX-AU8"/>
+                        <outlet property="lbResultUnit" destination="KzT-j3-v7w" id="pgh-d1-3lA"/>
+                        <outlet property="lbUnit" destination="sll-7e-0rp" id="19D-GF-9La"/>
                         <outlet property="tfValue" destination="XHJ-oI-1nR" id="CLH-52-ghC"/>
                     </connections>
                 </viewController>
